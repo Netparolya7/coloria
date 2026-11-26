@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="COLORIA - пространство материалов для творчества: акварель, кисти и скетчбуки.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="COLORIA - создай с любовью">
+  <meta property="og:description" content="Материалы и идеи для творческих экспериментов.">
+  <title>COLORIA — создавай с любовью</title>
+  <link rel="stylesheet" href="./coloria_assets/styles.css">
+  <script src="./coloria_assets/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Перейти к содержимому</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="COLORIA - на главную">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>COLORIA</span>
+      </a>
+
+      <nav class="nav" id="mainNav" aria-label="Основная навигация">
+        <a href="#catalog">Каталог</a>
+        <a href="#new">Новинки</a>
+        <a href="#about">О нас</a>
+        <a href="#inspiration">Вдохновение</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button" id="searchToggle" type="button"
+          aria-label="Открыть поиск" aria-haspopup="dialog" aria-controls="searchDialog">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="10.8" cy="10.8" r="7.2"></circle>
+            <path d="m16.2 16.2 4.4 4.4"></path>
+          </svg>
+        </button>
+        <button class="icon-button menu-toggle" id="menuToggle" type="button"
+          aria-label="Открыть меню" aria-expanded="false" aria-controls="mainNav">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <dialog class="search-dialog" id="searchDialog" aria-labelledby="search-title" aria-modal="true">
+    <form class="dialog-close-row" method="dialog">
+      <button class="dialog-close" type="submit" aria-label="Закрыть поиск">×</button>
+    </form>
+    <h2 id="search-title">Найти вдохновение</h2>
+    <label class="visually-hidden" for="siteSearch">Поиск по категориям</label>
+    <input id="siteSearch" type="search" autocomplete="off"
+      placeholder="Например, акварель" aria-describedby="searchHelp">
+    <p class="search-help" id="searchHelp">
+      Введите название категории: акварель, кисти или скетчбуки.
+    </p>
+    <div class="search-results" id="searchResults" role="status" aria-live="polite"></div>
+  </dialog>
+
+  <main id="main-content" tabindex="-1">
+    <section class="hero container" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span aria-hidden="true">✦</span> Пространство для творчества</p>
+        <h1 id="hero-title">Создавай<br>с любовью,<br><span class="gradient-text">рисуй с душой</span></h1>
+        <p class="hero-description">
+          Здесь не просто материалы для творчества — здесь начинается вдохновение.
+          Акварель ручной работы, кисти с историей и скетчбуки, в которые
+          влюбляешься с первого взгляда.
+        </p>
+        <div class="hero-buttons">
+          <a class="button button-primary" href="#catalog">Открыть каталог <span aria-hidden="true">→</span></a>
+          <a class="button button-secondary" href="#inspiration">Вдохновиться</a>
+        </div>
+        <dl class="stats" aria-label="Особенности проекта">
+          <div class="stat"><dt><strong>150+</strong></dt><dd>идей для творчества</dd></div>
+          <div class="stat"><dt><strong>100%</strong></dt><dd>с любовью к деталям</dd></div>
+          <div class="stat"><dt><strong>3К+</strong></dt><dd>оттенков вокруг</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero-visual" aria-label="Иллюстрация художественного рабочего места">
+        <div class="artboard" aria-hidden="true">
+          <div class="table-grain"></div>
+          <div class="paint-box">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <div class="paper"></div>
+          <div class="palette"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="brushes"><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="floating-card floating-card-one">
+          <span class="swatch" aria-hidden="true"></span>
+          <span><strong>Акварель</strong><small>для ярких идей</small></span>
+        </div>
+        <div class="floating-card floating-card-two">
+          <span class="swatch swatch-gold" aria-hidden="true"></span>
+          <span><strong>Скетчбуки</strong><small>бумага для эскизов</small></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories section" id="catalog" tabindex="-1" aria-labelledby="catalog-title">
+      <div class="container">
+        <p class="section-kicker">✧ Категории</p>
+        <h2 class="section-heading" id="catalog-title">Всё для твоего творчества</h2>
+        <p class="section-intro">
+          Мы собрали материалы для художников, иллюстраторов и всех, кто любит творить.
+        </p>
+
+        <div class="category-grid">
+          <a class="category-card" href="#new" data-keywords="акварель краски ручная работа живопись">
+            <img src="./coloria_assets/category-1.jpg" alt="" width="600" height="760" loading="lazy">
+            <span class="category-caption">
+              <small>Ручная работа</small>
+              <strong>Акварель</strong>
+            </span>
+          </a>
+          <a class="category-card" href="#new" data-keywords="кисти бамбук инструменты рисование">
+            <img src="./coloria_assets/category-2.jpg" alt="" width="600" height="760" loading="lazy">
+            <span class="category-caption">
+              <small>Бамбуковые ручки</small>
+              <strong>Кисти</strong>
+            </span>
+          </a>
+          <a class="category-card" href="#new" data-keywords="скетчбуки бумага эскизы блокнот">
+            <img src="./coloria_assets/category-3.jpg" alt="" width="600" height="760" loading="lazy">
+            <span class="category-caption">
+              <small>Дизайнерская бумага</small>
+              <strong>Скетчбуки</strong>
+            </span>
+          </a>
+        </div>
+        <a class="catalog-more" href="#new">Смотреть подборку <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="why section" id="about" tabindex="-1" aria-labelledby="about-title">
+      <div class="container">
+        <h2 class="section-heading" id="about-title">Почему COLORIA?</h2>
+        <p class="section-intro">Мы не просто продаём материалы — мы создаём пространство для вдохновения.</p>
+        <div class="benefits">
+          <article class="benefit">
+            <div class="benefit-icon" aria-hidden="true">🎨</div>
+            <h3>Уникальные материалы</h3>
+            <p>Разные техники и цветовые эксперименты в одном месте.</p>
+          </article>
+          <article class="benefit">
+            <div class="benefit-icon" aria-hidden="true">♡</div>
+            <h3>Сделано с любовью</h3>
+            <p>Подбирайте инструменты под свой темп, задачи и настроение.</p>
+          </article>
+          <article class="benefit">
+            <div class="benefit-icon" aria-hidden="true">□</div>
+            <h3>Красивая упаковка</h3>
+            <p>Материалы и детали, которые приятно дарить и получать.</p>
+          </article>
+          <article class="benefit">
+            <div class="benefit-icon" aria-hidden="true">✦</div>
+            <h3>Вдохновение в подарок</h3>
+            <p>Идеи и визуальные находки для новых творческих экспериментов.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="new" tabindex="-1" aria-labelledby="new-title">
+      <p class="section-kicker">Небольшие радости</p>
+      <h2 class="section-heading" id="new-title">Новинки, которые вдохновляют</h2>
+      <p class="section-intro">
+        Попробуйте необычные материалы, сочетайте привычные инструменты и ищите собственный стиль.
+      </p>
+      <div class="new-grid">
+        <article class="new-card">
+          <span class="new-card-icon" aria-hidden="true">🎨</span>
+          <p class="new-card-label">Цвет и фактура</p>
+          <h3>Попробуй акварель</h3>
+          <p>Смешивайте оттенки, наблюдайте за прозрачностью и находите неожиданные сочетания.</p>
+          <a href="#catalog">Смотреть материалы <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="new-card">
+          <span class="new-card-icon" aria-hidden="true">🖌️</span>
+          <p class="new-card-label">Инструменты</p>
+          <h3>Найди свою кисть</h3>
+          <p>Экспериментируйте с линиями, нажимом и разными способами нанесения цвета.</p>
+          <a href="#catalog">Смотреть материалы <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="new-card">
+          <span class="new-card-icon" aria-hidden="true">📒</span>
+          <p class="new-card-label">Идеи на каждый день</p>
+          <h3>Начни скетчбук</h3>
+          <p>Сохраняйте зарисовки, заметки и маленькие визуальные открытия.</p>
+          <a href="#catalog">Смотреть материалы <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+      <p class="demo-note">Тематическая подборка для демонстрации концепции, а не карточки товаров.</p>
+    </section>
+
+    <section class="section container inspiration" id="inspiration" tabindex="-1" aria-labelledby="inspiration-title">
+      <div class="inspiration-art" role="img" aria-label="Абстрактная композиция в пастельных цветах">
+        <p class="inspiration-note">Твоя следующая идея начинается здесь ✨</p>
+      </div>
+      <div>
+        <p class="section-kicker">Твори в своём ритме</p>
+        <h2 class="section-heading" id="inspiration-title">Не обязательно быть художником, чтобы творить</h2>
+        <p class="section-intro">
+          Рисование может быть способом отдохнуть, понаблюдать за миром или сохранить впечатление.
+          Здесь нет обязательного результата — только место для экспериментов.
+        </p>
+        <a class="button button-secondary inspiration-button" href="#catalog">Найти материалы <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="project-strip" id="about-project" tabindex="-1" aria-labelledby="project-title">
+      <div class="container project-inner">
+        <h2 id="project-title">Красота — в процессе.<br>Цвет — в деталях.</h2>
+        <p>COLORIA — концепция уютного пространства о материалах для творчества, внимании к деталям и радости создавать что-то своими руками.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <a class="brand" href="#top" aria-label="COLORIA - наверх">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>COLORIA</span>
+        </a>
+        <div class="footer-links">
+          <a href="#catalog">Каталог</a>
+          <a href="#inspiration">Вдохновение</a>
+          <a href="#about-project">О проекте</a>
+        </div>
+      </div>
+      <p class="footer-note">
+        Учебный демонстрационный проект, созданный в образовательных целях.
+        Сайт не является коммерческим предложением.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
